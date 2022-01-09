@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YZH-Ih-c7c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendDataByUsingDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-TT-Qnt">
+                                <rect key="frame" x="20" y="188" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new sentence by using :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCn-bw-I4c">
+                                <rect key="frame" x="20" y="288" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-XK-EUh">
+                                <rect key="frame" x="159" y="408.5" width="96" height="69"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh3-3L-L22">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Storyboard"/>
+                                        <connections>
+                                            <action selector="clickedStoryboardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9wQ-6P-3sC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-PL-aJI">
+                                        <rect key="frame" x="0.0" y="38" width="96" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Segue"/>
+                                        <connections>
+                                            <action selector="clickedSegueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLr-Rk-GQc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XaJ-XK-EUh" firstAttribute="top" secondItem="oCn-bw-I4c" secondAttribute="bottom" constant="100" id="3uk-sz-cym"/>
+                            <constraint firstItem="oCn-bw-I4c" firstAttribute="top" secondItem="5Et-TT-Qnt" secondAttribute="bottom" constant="100" id="7JZ-vv-oMp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Et-TT-Qnt" secondAttribute="trailing" constant="20" id="I5c-68-sNf"/>
+                            <constraint firstItem="5Et-TT-Qnt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="aRg-aA-C91"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCn-bw-I4c" secondAttribute="trailing" constant="20" id="bqq-s2-27q"/>
+                            <constraint firstItem="oCn-bw-I4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eaF-lv-RQ9"/>
+                            <constraint firstItem="XaJ-XK-EUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppA-uQ-H1k"/>
+                            <constraint firstItem="5Et-TT-Qnt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tW2-sc-gkG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="hMy-EF-IdA"/>
+                    <connections>
+                        <outlet property="showTextLabel" destination="5Et-TT-Qnt" id="zdF-MG-pCk"/>
+                        <segue destination="wzg-SR-sSz" kind="show" identifier="toSegue" id="2sN-bd-k5B"/>
+                        <segue destination="oax-Ix-80e" kind="show" identifier="toStoryboard" id="fu4-iu-3ce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="-288"/>
+        </scene>
+        <!--Segue-->
+        <scene sceneID="9KK-6M-M64">
+            <objects>
+                <viewController storyboardIdentifier="SegueViewController" id="wzg-SR-sSz" customClass="SegueViewController" customModule="SendDataByUsingDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fly-wE-6V2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add sentence for home page by using segue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAD-vd-Dq7">
+                                <rect key="frame" x="20" y="188" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="thS-rc-5xi">
+                                <rect key="frame" x="20" y="259" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spX-8l-WUz">
+                                <rect key="frame" x="178" y="343" width="58" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send"/>
+                                <connections>
+                                    <action selector="segueSendButton:" destination="wzg-SR-sSz" eventType="touchUpInside" id="kvg-59-lTz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mXX-as-deU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mXX-as-deU" firstAttribute="trailing" secondItem="cAD-vd-Dq7" secondAttribute="trailing" constant="20" id="3jz-f1-PPw"/>
+                            <constraint firstItem="thS-rc-5xi" firstAttribute="leading" secondItem="mXX-as-deU" secondAttribute="leading" constant="20" id="Ak9-l8-d0i"/>
+                            <constraint firstItem="thS-rc-5xi" firstAttribute="top" secondItem="cAD-vd-Dq7" secondAttribute="bottom" constant="50" id="KxX-LF-fSw"/>
+                            <constraint firstItem="mXX-as-deU" firstAttribute="trailing" secondItem="thS-rc-5xi" secondAttribute="trailing" constant="20" id="Mhz-RG-ta3"/>
+                            <constraint firstItem="spX-8l-WUz" firstAttribute="centerX" secondItem="fly-wE-6V2" secondAttribute="centerX" id="S97-KL-wyV"/>
+                            <constraint firstItem="spX-8l-WUz" firstAttribute="top" secondItem="thS-rc-5xi" secondAttribute="bottom" constant="50" id="Y7e-FH-ffZ"/>
+                            <constraint firstItem="cAD-vd-Dq7" firstAttribute="top" secondItem="mXX-as-deU" secondAttribute="top" constant="100" id="nyr-Wf-6TB"/>
+                            <constraint firstItem="cAD-vd-Dq7" firstAttribute="leading" secondItem="mXX-as-deU" secondAttribute="leading" constant="20" id="wjQ-d9-kDj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segue" id="wQI-24-Biz"/>
+                    <connections>
+                        <outlet property="segueTextField" destination="thS-rc-5xi" id="1KC-jd-JfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJD-Ay-zuz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896" y="435"/>
+        </scene>
+        <!--Storyboard-->
+        <scene sceneID="uPY-gx-C0s">
+            <objects>
+                <viewController storyboardIdentifier="StoryboardViewController" id="oax-Ix-80e" customClass="StoryboardViewController" customModule="SendDataByUsingDelegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ktt-mI-VsH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add sentence for home page by using function of storyboard" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-dA-uS6">
+                                <rect key="frame" x="20" y="188" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6yg-8c-puf">
+                                <rect key="frame" x="20" y="279" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flp-XI-a4S">
+                                <rect key="frame" x="178" y="363" width="58" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send"/>
+                                <connections>
+                                    <action selector="storyboardSendButton:" destination="oax-Ix-80e" eventType="touchUpInside" id="UzM-IU-Srl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U1v-uy-txB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="flp-XI-a4S" firstAttribute="top" secondItem="6yg-8c-puf" secondAttribute="bottom" constant="50" id="82K-zw-yJY"/>
+                            <constraint firstItem="6yg-8c-puf" firstAttribute="leading" secondItem="U1v-uy-txB" secondAttribute="leading" constant="20" id="I8n-QR-b10"/>
+                            <constraint firstItem="flp-XI-a4S" firstAttribute="centerX" secondItem="ktt-mI-VsH" secondAttribute="centerX" id="Zgz-xK-l9r"/>
+                            <constraint firstItem="6yg-8c-puf" firstAttribute="top" secondItem="MHx-dA-uS6" secondAttribute="bottom" constant="50" id="jNT-4y-DLX"/>
+                            <constraint firstItem="MHx-dA-uS6" firstAttribute="top" secondItem="U1v-uy-txB" secondAttribute="top" constant="100" id="xa9-Gp-6jV"/>
+                            <constraint firstItem="U1v-uy-txB" firstAttribute="trailing" secondItem="6yg-8c-puf" secondAttribute="trailing" constant="20" id="xt5-cD-8y2"/>
+                            <constraint firstItem="U1v-uy-txB" firstAttribute="trailing" secondItem="MHx-dA-uS6" secondAttribute="trailing" constant="20" id="yKd-JZ-n5s"/>
+                            <constraint firstItem="MHx-dA-uS6" firstAttribute="leading" secondItem="U1v-uy-txB" secondAttribute="leading" constant="20" id="z5L-de-7eh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Storyboard" id="e35-h3-81Z"/>
+                    <connections>
+                        <outlet property="storyboardTextField" destination="6yg-8c-puf" id="EYy-ai-wIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Mj-21-n1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="-289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RUt-Bo-OUX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YZH-Ih-c7c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yiq-lD-b6h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RcW-vO-zrh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6n6-Vd-wr7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155" y="-156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
